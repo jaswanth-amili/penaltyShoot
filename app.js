@@ -66,9 +66,11 @@ var ButtonClick = () => {
   if (turn === 1) {
     team1.goals.push(goals);
     team1.score = CalculateScore(team1.goals);
+    turn = 2;
   } else {
     team2.goals.push(goals);
     team2.score = CalculateScore(team2.goals);
+    turn = 1;
   }
 
   updateButtonText();
